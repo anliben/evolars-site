@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "provider": "shell",
+  "buildAptPackages": ["curl", "tar"],
+
+  "steps": {
+    "caddy": {
+      "commands": [
+        "curl -fsSLo caddy.tar.gz \"https://github.com/caddyserver/caddy/releases/download/v2.7.4/caddy_2.7.4_linux_amd64.tar.gz\"",
+        "tar -zxvf caddy.tar.gz caddy",
+        "chmod +x caddy",
+        "./caddy fmt --overwrite Caddyfile"
+      ],
+      "deployOutputs": [
+        { "include": ["./caddy", "./Caddyfile", "./src", "./start.sh"] }
+      ]
+    }
+  },
+
+  "deploy": {
+    "base": { "image": "ubuntu:20.04" },
+    "inputs": [{ "step": "caddy", "include": ["."] }],
+    "startCommand": "./start.sh"
+  }
+}
