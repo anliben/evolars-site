@@ -1,0 +1,4 @@
+:8080 {
+  root * /workspace/evolars-site
+  file_server
+}
