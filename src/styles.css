@@ -25,6 +25,39 @@ body {
   gap: 80px;
 }
 
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-header__brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #f5f6ff;
+  text-decoration: none;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-header__nav a {
+  color: #b8bbd3;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header__nav a:hover,
+.site-header__nav a:focus-visible {
+  color: #ffffff;
+}
+
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -213,6 +246,11 @@ ul li::before {
 @media (max-width: 720px) {
   .page {
     padding-top: 64px;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero__card {

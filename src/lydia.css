@@ -1,0 +1,276 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+body.lydia {
+  --lydia-bg: #0b1020;
+  --lydia-surface: rgba(18, 24, 42, 0.85);
+  --lydia-accent: #7a5cff;
+  --lydia-accent-soft: rgba(122, 92, 255, 0.2);
+  --lydia-text: #f5f6ff;
+  --lydia-muted: #b8bfdc;
+  --lydia-border: rgba(120, 136, 196, 0.4);
+  --lydia-glow: rgba(122, 92, 255, 0.35);
+
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #141a2f, var(--lydia-bg) 60%);
+  color: var(--lydia-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.lydia-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-header__brand span {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-header__nav a {
+  color: var(--lydia-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header__nav a:focus-visible,
+.site-header__nav a:hover {
+  color: var(--lydia-text);
+}
+
+.lydia-hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+
+.lydia-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lydia-hero__logo {
+  width: min(240px, 80%);
+  filter: drop-shadow(0 20px 40px rgba(23, 24, 43, 0.6));
+}
+
+.lydia-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.lydia-card {
+  background: var(--lydia-surface);
+  border: 1px solid var(--lydia-border);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 30px 70px rgba(6, 9, 20, 0.6);
+}
+
+.lydia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.lydia-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.lydia-section__intro {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lydia-section__intro p {
+  color: var(--lydia-muted);
+}
+
+.lydia-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--lydia-border);
+  color: var(--lydia-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  background: rgba(9, 12, 24, 0.8);
+}
+
+.lydia-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  color: var(--lydia-muted);
+}
+
+.lydia-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.lydia-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--lydia-accent);
+}
+
+.lydia-channel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--lydia-text);
+}
+
+.lydia-channel svg {
+  width: 28px;
+  height: 28px;
+  color: var(--lydia-accent);
+}
+
+.lydia-steps {
+  display: grid;
+  gap: 16px;
+}
+
+.lydia-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.lydia-step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--lydia-accent-soft);
+  color: var(--lydia-text);
+  font-weight: 700;
+}
+
+.lydia-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid var(--lydia-border);
+  background: linear-gradient(120deg, rgba(21, 24, 44, 0.9), rgba(12, 14, 26, 0.95));
+  box-shadow: 0 30px 80px rgba(6, 9, 22, 0.6);
+}
+
+.lydia-button {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(122, 92, 255, 0.6);
+  font-weight: 600;
+  background: linear-gradient(120deg, #7a5cff, #4d3cff);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lydia-button:hover,
+.lydia-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(122, 92, 255, 0.35);
+}
+
+.lydia-button--ghost {
+  background: transparent;
+  color: var(--lydia-text);
+  border: 1px solid rgba(186, 177, 255, 0.4);
+}
+
+h1 {
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--lydia-accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lydia-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
