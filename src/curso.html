@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Futuro Eu Que Faço — Curso Gratuito de Tecnologia | Evolars</title>
+  <meta name="description" content="Curso gratuito de tecnologia para jovens a partir de 10 anos. Aprenda sobre apps, jogos, sites e descubra profissões incríveis. Sem precisar de computador ou dinheiro.">
+  <meta name="keywords" content="curso gratuito, tecnologia para jovens, programação para crianças, curso de tecnologia, Evolars">
+  <meta name="author" content="Evolars LTDA">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meu Futuro Eu Que Faço — Curso Gratuito de Tecnologia">
+  <meta property="og:description" content="Curso gratuito de tecnologia para jovens a partir de 10 anos. Videoaulas ao vivo, sem precisar de computador ou dinheiro. Inscreva-se!">
+  <meta property="og:image" content="assets/curso_sabado.png">
+  <meta property="og:url" content="https://evolars.com.br/curso.html">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meu Futuro Eu Que Faço — Curso Gratuito de Tecnologia">
+  <meta name="twitter:description" content="Curso gratuito de tecnologia para jovens a partir de 10 anos. Videoaulas ao vivo, sem precisar de computador ou dinheiro.">
+  <meta name="twitter:image" content="assets/curso_sabado.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== UTILITIES ===== */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      color: #1e293b;
+    }
+
+    .section-title span {
+      color: #2563EB;
+    }
+
+    /* ===== CTA BUTTON ===== */
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #2563EB, #7C3AED);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 1rem 2.25rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
+    }
+
+    .cta-btn:hover,
+    .cta-btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+      outline: none;
+    }
+
+    .cta-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #0f172a;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(180deg, rgba(15,23,42,0.5) 0%, rgba(15,23,42,0.85) 100%);
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      padding: 2rem 1.25rem;
+      max-width: 750px;
+    }
+
+    .hero__badge {
+      display: inline-block;
+      background: #059669;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .hero__title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .hero__title span {
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero__subtitle {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .hero__hook {
+      font-size: 1rem;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      background: #f8fafc;
+    }
+
+    .about__text {
+      max-width: 750px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: #334155;
+      text-align: center;
+    }
+
+    .about__text strong {
+      color: #2563EB;
+    }
+
+    /* ===== MODULES ===== */
+    .modules__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .module-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .module-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .module-card__number {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #2563EB, #7C3AED);
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .module-card__title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    /* ===== SCROLL REVEAL (CSS only) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal:nth-child(2) { transition-delay: 0.08s; }
+    .reveal:nth-child(3) { transition-delay: 0.16s; }
+    .reveal:nth-child(4) { transition-delay: 0.24s; }
+    .reveal:nth-child(5) { transition-delay: 0.32s; }
+    .reveal:nth-child(6) { transition-delay: 0.4s; }
+    .reveal:nth-child(7) { transition-delay: 0.48s; }
+
+    /* ===== AUDIENCE ===== */
+    .audience {
+      background: #f8fafc;
+    }
+
+    .audience__list {
+      max-width: 650px;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .audience__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 1.05rem;
+      color: #334155;
+      background: #fff;
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .audience__check {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #059669;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    /* ===== BENEFITS ===== */
+    .benefits__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+      background: #fff;
+      padding: 1.25rem 1.5rem;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .benefit-card__icon {
+      flex-shrink: 0;
+      font-size: 1.75rem;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eff6ff;
+      border-radius: 12px;
+    }
+
+    .benefit-card__text {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #1e293b;
+    }
+
+    /* ===== CTA FINAL ===== */
+    .cta-final {
+      background: linear-gradient(135deg, #2563EB, #7C3AED);
+      text-align: center;
+      padding: 4.5rem 1.25rem;
+    }
+
+    .cta-final__title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .cta-final__sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2rem;
+    }
+
+    .cta-final .cta-btn {
+      background: #fff;
+      color: #2563EB;
+      font-size: 1.15rem;
+      padding: 1.1rem 2.5rem;
+    }
+
+    .cta-final .cta-btn:hover,
+    .cta-final .cta-btn:focus-visible {
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2.5rem 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .footer strong {
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .footer a {
+      color: #60a5fa;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover {
+      color: #93bbfd;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 640px) {
+      .hero__title {
+        font-size: 3rem;
+      }
+
+      .hero__subtitle {
+        font-size: 1.25rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .modules__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefits__grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .hero__title {
+        font-size: 3.5rem;
+      }
+
+      .section {
+        padding: 5rem 0;
+      }
+
+      .modules__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefits__grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .modules__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ===== SKIP LINK (Accessibility) ===== */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: #2563EB;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      z-index: 100;
+      font-weight: 600;
+      border-radius: 0 0 8px 0;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" role="banner">
+    <div class="hero__bg">
+      <img src="assets/curso_sabado.png" alt="Curso Meu Futuro Eu Que Faço — jovens aprendendo tecnologia" width="1920" height="1080" loading="eager">
+    </div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <span class="hero__badge">100% Gratuito</span>
+      <h1 class="hero__title"><span>Meu Futuro</span> Eu Que Faço</h1>
+      <p class="hero__subtitle">Curso gratuito de tecnologia para jovens a partir de 10 anos</p>
+      <p class="hero__hook">Sem computador. Sem dinheiro. Sem ser maior de idade.<br>Você só precisa de curiosidade.</p>
+      <a href="https://odoo.evolars.com.br/book/588232fe" target="_blank" rel="noopener noreferrer" class="cta-btn" aria-label="Quero me inscrever no curso gratuito">Quero me inscrever</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== SOBRE O CURSO ===== -->
+    <section class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section-title" id="about-title">Sobre o <span>curso</span></h2>
+        <p class="about__text">
+          E aí! Que bom que você tá aqui. Esse curso é pra você que quer entender como funciona o mundo da tecnologia.
+          <br><br>
+          Sabe aquele app que você usa todo dia? <strong>Alguém criou ele.</strong> Sabe aquele jogo que você adora? <strong>Alguém programou ele.</strong> E esse alguém pode ser você.
+          <br><br>
+          Ah, mas eu não tenho computador? Tudo bem. Não tenho dinheiro? Tudo bem também. Sou menor de idade? <strong>Melhor ainda</strong>, porque você tá começando cedo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== MÓDULOS ===== -->
+    <section class="section" aria-labelledby="modules-title">
+      <div class="container">
+        <h2 class="section-title" id="modules-title">O que você vai <span>aprender</span></h2>
+        <div class="modules__grid">
+          <div class="module-card reveal" role="listitem">
+            <div class="module-card__number" aria-hidden="true">1</div>
+            <p class="module-card__title">O que é Tecnologia?</p>
+          </div>
+          <div class="module-card reveal" role="listitem">
+            <div class="module-card__number" aria-hidden="true">2</div>
+            <p class="module-card__title">Os Cargos em Tecnologia</p>
+          </div>
+          <div class="module-card reveal" role="listitem">
+            <div class="module-card__number" aria-hidden="true">3</div>
+            <p class="module-card__title">Como Começar sem Computador</p>
+          </div>
+          <div class="module-card reveal" role="listitem">
+            <div class="module-card__number" aria-hidden="true">4</div>
+            <p class="module-card__title">Como Começar sem Dinheiro</p>
+          </div>
+          <div class="module-card reveal" role="listitem">
+            <div class="module-card__number" aria-hidden="true">5</div>
+            <p class="module-card__title">Como Começar Sendo Menor de Idade</p>
+          </div>
+          <div class="module-card reveal" role="listitem">
+            <div class="module-card__number" aria-hidden="true">6</div>
+            <p class="module-card__title">Seu Roteiro de Estudos</p>
+          </div>
+          <div class="module-card reveal" role="listitem">
+            <div class="module-card__number" aria-hidden="true">7</div>
+            <p class="module-card__title">Construindo seu Futuro</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PARA QUEM ===== -->
+    <section class="section audience" aria-labelledby="audience-title">
+      <div class="container">
+        <h2 class="section-title" id="audience-title">Para quem é <span>esse curso?</span></h2>
+        <ul class="audience__list" role="list">
+          <li class="audience__item reveal">
+            <span class="audience__check" aria-hidden="true">✓</span>
+            <span>Jovens de 10 a 17 anos (ou qualquer idade!)</span>
+          </li>
+          <li class="audience__item reveal">
+            <span class="audience__check" aria-hidden="true">✓</span>
+            <span>Quem tem curiosidade sobre apps, jogos e sites</span>
+          </li>
+          <li class="audience__item reveal">
+            <span class="audience__check" aria-hidden="true">✓</span>
+            <span>Quem acha que não pode aprender por falta de recursos</span>
+          </li>
+          <li class="audience__item reveal">
+            <span class="audience__check" aria-hidden="true">✓</span>
+            <span>Quem quer descobrir profissões com bons salários</span>
+          </li>
+          <li class="audience__item reveal">
+            <span class="audience__check" aria-hidden="true">✓</span>
+            <span>Quem sonha em criar algo que milhões de pessoas vão usar</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== DIFERENCIAIS ===== -->
+    <section class="section" aria-labelledby="benefits-title">
+      <div class="container">
+        <h2 class="section-title" id="benefits-title">Por que esse curso é <span>diferente?</span></h2>
+        <div class="benefits__grid">
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">🆓</div>
+            <p class="benefit-card__text">100% gratuito</p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">📱</div>
+            <p class="benefit-card__text">Dá pra acompanhar pelo celular</p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">🎥</div>
+            <p class="benefit-card__text">Videoaulas ao vivo de 1 hora</p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">🗓️</div>
+            <p class="benefit-card__text">No seu ritmo, sem pressa</p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">🏆</div>
+            <p class="benefit-card__text">Certificado de conclusão</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cta-final" aria-labelledby="cta-final-title">
+      <div class="container">
+        <h2 class="cta-final__title" id="cta-final-title">O melhor momento pra começar é agora.<br>O segundo melhor é agora também.</h2>
+        <p class="cta-final__sub">Garanta sua vaga no curso gratuito de tecnologia.</p>
+        <a href="https://odoo.evolars.com.br/book/588232fe" target="_blank" rel="noopener noreferrer" class="cta-btn" aria-label="Me inscrever agora no curso gratuito">Me inscrever agora</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p><strong>Evolars LTDA</strong></p>
+      <p>
+        <a href="tel:+5511999999999">+55 11 99999-9999</a> |
+        <a href="mailto:contato@suaempresa.com.br">contato@suaempresa.com.br</a>
+      </p>
+      <p>Rua da Tecnologia, 123</p>
+    </div>
+  </footer>
+
+  <!-- ===== SCROLL REVEAL (lightweight JS) ===== -->
+  <script>
+    (function () {
+      var reveals = document.querySelectorAll('.reveal');
+      if (!reveals.length) return;
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        reveals.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        reveals.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
