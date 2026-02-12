@@ -1,7 +1,7 @@
 (() => {
   const defaults = {
     ctaTalkUrl: "https://wa.me/5511994946644",
-    ctaDemoUrl: "mailto:contato@evolars.com.br?subject=Demo%20Lydia",
+    ctaDemoUrl: "mailto:atendimento@evolars.com.br?subject=Demo%20Lydia",
     ctaTalkLabel: "Falar com a Lydia",
     ctaDemoLabel: "Solicitar demonstração",
   };
