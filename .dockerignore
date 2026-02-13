@@ -1,0 +1,6 @@
+.git
+.gitignore
+readme.md
+Staticfile
+Dockerfile
+.dockerignore
